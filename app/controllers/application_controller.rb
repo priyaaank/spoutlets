@@ -4,6 +4,11 @@ class ApplicationController < ActionController::Base
   helper_method :user_signed_in?
   helper_method :correct_user?
 
+  protected
+    def authenticate_inviter!
+      authenticate_user!
+    end
+
   private
     def current_user
       begin

@@ -2,10 +2,7 @@ Spoutlets::Application.routes.draw do
   devise_for :therapists
 
   resources :therapists
-
-
   resources :entries
-
 
   root :to => 'entries#index'
   resources :users, :only => [:index, :show, :edit, :update ]

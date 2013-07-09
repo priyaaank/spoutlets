@@ -1,6 +1,7 @@
 class User
   include Mongoid::Document
   include Mongoid::Timestamps
+  include DeviseInvitable::Inviter
   rolify
   field :provider, type: String
   field :uid, type: String
